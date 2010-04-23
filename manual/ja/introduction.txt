@@ -5,7 +5,7 @@
 
 ++ Doctrineって何？
 
-DoctrineはPHP5.2.3以降用のオブジェクトリレーショナルマッパー(ORM - Object Relational Mapper)で強力なデータベース抽象化レイヤー(DBAL - DataBase Abstraction Layer)です。主要な機能の1つはDoctrine Query Language (DQL)と呼ばれるプロプリエタリなオブジェクト指向のSQL方言でデータベースクエリを書くオプションがあることです。HibernateのHQLにインスパイアされ、これは開発者に柔軟性を維持し不要なコードの重複がないSQLの強力な代替機能を提供します。
+DoctrineはPHP5.2.3以降用のオブジェクトリレーショナルマッパー(ORM - Object Relational Mapper)で強力なデータベース抽象化レイヤー(DBAL - DataBase Abstraction Layer)です。主要な機能の1つとしてDoctrine Query Language (DQL)と呼ばれるプロプリエタリなオブジェクト指向のSQL方言でデータベースクエリを書けることがあります。DQLはHibernateのHQLにインスパイアされており、不要なコードの重複なしに柔軟性を維持するSQLの強力な代替機能を開発者に提供します。
 
 ++ ORMって何？
 
