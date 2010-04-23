@@ -38,7 +38,7 @@ DoctrineはPHP製のオブジェクトリレーショナルマッピング用の
 
 [http://www.doctrine-project.org/images/doctrine-layers.jpg Doctrineレイヤー]
 
-DBAL(Database Abstraction Layer)は基本的なデータベースのPDOによって既に提供される抽象化/独立性を完成および拡張します。PDOの元で強力なデータベース抽象化レイヤーを使いたいだけなら、DBALライブラリはスタンドアロンで利用可能です。ORMレイヤーはDBALに依存するので、ORMパッケージをロードするときDBALは既にインクルードされています。
+DBAL(Database Abstraction Layer)は基本的なデータベースのPDOによって既に提供される抽象化/独立性を完備し拡張します。PDOの元で強力なデータベース抽象化レイヤーを使いたいだけなら、DBALライブラリはスタンドアロンで利用可能です。ORMレイヤーはDBALに依存するので、ORMパッケージをロードするときDBALは既にインクルードされています。
 
 ++ Doctrineの説明
 
