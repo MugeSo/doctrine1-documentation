@@ -254,8 +254,8 @@ foreach ($users as $user) {
 || {{postSave()}}     || {{save()}} ||
 || {{preUpdate()}}    || レコードが{{DIRTY}}のとき{{save()}} ||
 || {{postUpdate()}}   || レコードが{{DIRTY}}のとき{{save()}} ||
-|| {{preInsert()}}    || レコードが{{DIRTY}}のとき{{save()}} ||
-|| {{postInsert()}}   || レコードが{{DIRTY}}のとき{{save()}} ||
+|| {{preInsert()}}    || レコードが{{TDIRTY}}のとき{{save()}} ||
+|| {{postInsert()}}   || レコードが{{TDIRTY}}のとき{{save()}} ||
 || {{preDelete()}}    || {{delete()}} ||
 || {{postDelete()}}   || {{delete()}} ||
 || {{preValidate()}}  || {{validate()}} ||
