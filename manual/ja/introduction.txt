@@ -34,7 +34,7 @@ DoctrineはPHP5.2.3以降を必要とし、外部ライブラリは必要あり�
 
 ++ 基本的な概要
 
-DoctrineはPHP製のオブジェクトリレーショナルマッピング用のツールです。DoctrineはPDOを利用し2つの主要なレイヤー、DBALとORMに分割されます。下記の図はDoctrineのそれぞれのレイヤーが連携する様子を示しています。
+DoctrineはPHP製のオブジェクトリレーショナルマッピング用のツールです。DoctrineはPDO上で動作し、DBALとORMの2つの主要なレイヤーに分割されています。下記の図はDoctrineのそれぞれのレイヤーが連携する様子を示しています。
 
 [http://www.doctrine-project.org/images/doctrine-layers.jpg Doctrineレイヤー]
 
