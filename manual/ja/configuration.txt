@@ -59,7 +59,7 @@ $table->setAttribute(Doctrine_Core::ATTR_VALIDATE, Doctrine_Core::VALIDATE_ALL);
 || {{PORTABILITY_EMPTY_TO_NULL}}         || データと出力において空の文字列の値をnullに変換する。必要なのはOracleは空の文字列をnullと見なす一方で、その他の主なDBMSは空とnullの違いを知っているからです。||
 || {{PORTABILITY_ERRORS}}                || 特定のドライバの特定のエラーメッセージを他のDBMSと互換性があるようにする ||
 || {{PORTABILITY_FIX_ASSOC_FIELD_NAMES}} || これは連想配列形式の取得においてキーから修飾子を削除します。SQLiteなどは、クエリで省略されていない場合に連想配列形式のカラムに対して省略されていない名前をデフォルトで使用します。||
-|| {{PORTABILITY_FIX_CASE}}              || すべてのメソッドで小文字もしくは大文字にするためにテーブルとフィールドの名前を変換する。事例はfield_caseオプションに依存し{{CASE_LOWER}}(デフォルト)もしくは{{CASE_UPPER}}のどちらかに設定できます。||
+|| {{PORTABILITY_FIX_CASE}}              || すべてのメソッドで小文字もしくは大文字にするためにテーブルとフィールドの名前を変換する。大文字か小文字かはfield_caseオプションに依存し{{CASE_LOWER}}(デフォルト)もしくは{{CASE_UPPER}}のどちらかに設定できます。||
 || {{PORTABILITY_NONE}}                  || すべてのポータビリティ機能を無効にする。||
 || {{PORTABILITY_NUMROWS}}               || Oracleで{{numRows()}}を動作させるためのハックを有効にする ||
 || {{PORTABILITY_EXPR}}                  || ポータブルではない式が使われる場合にDQL APIが例外を投げる。||
