@@ -90,7 +90,7 @@ echo $name; // connection 1
 
 ++ 接続を閉じる
 
-接続を閉じたりDoctrine接続レジストリから削除のは簡単です:
+接続を閉じたりDoctrine接続レジストリから削除するのは簡単です。
 
 <code type="php">
 // test.php
@@ -101,7 +101,7 @@ $conn = Doctrine_Manager::connection();
 $manager->closeConnection($conn);
 </code>
 
-接続を閉じるがDoctrine接続レジストリから削除したくない場合は次のコードが利用できます:
+接続を閉じてもDoctrine接続レジストリから削除したくない場合は次のコードが利用できます:
 
 <code type="php">
 // test.php
@@ -125,7 +125,7 @@ foreach ($conns as $conn) {
 }
 </code>
 
-上記のコードは初期の頃に{{Doctrine_Manager}}オブジェクトをイテレートすることと同じです。再度掲載します:
+上記のコードは前に登場した{{Doctrine_Manager}}オブジェクトをイテレートする方法と同じです。再度掲載します。
 
 <code type="php">
 // test.php
