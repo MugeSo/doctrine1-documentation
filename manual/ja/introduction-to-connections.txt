@@ -95,19 +95,19 @@ pgsql://user:pass@tcp(localhost:5555)/pear
 > **NOTE**
 > 使うのであれば、IPアドレス{{{127.0.0.1}}}、ポートパラメータ(デフォルト: 3306)は無視されます。
 
-**例 3.** オプションを利用するUnixマシン上でのSQLiteへの接続
+**例 3.** オプションを利用したUnixマシン上でのSQLiteへの接続
 
 <code>
 sqlite:////full/unix/path/to/file.db?mode=0666
 </code>
 
-**例 4.** オプションを利用してWindowsマシンでSQLiteに接続する
+**例 4.** オプションを利用したWindowsマシン上でのSQLiteへの接続
 
 <code>
 sqlite:///c:/full/windows/path/to/file.db?mode=0666
 </code>
 
-**例 5.** SSLを利用してMySQLiに接続する
+**例 5.** SSLを利用したMySQLiへの接続
 
 <code>
 mysqli://user:pass@localhost/pear?key=client-key.pem&cert=client-cert.pem
@@ -144,7 +144,7 @@ $conn->setOption('password', $password);
 
 ++ データベースの遅延接続
 
-データベースへの遅延接続は多くのリソースを節約できます。常に遅延接続を使うことが推奨されるので、実際にデータベース接続を必要とする機会はあまりないでしょう(すなわちDoctrineは必要なときだけデータベースに接続する)。
+データベースへの遅延接続は多くのリソースを節約できます。常に遅延接続を使うことが推奨されるので、実際にデータベース接続を必要とする機会はあまりないでしょう(すなわちDoctrineは必要なときだけデータベースに接続します)。
 
 毎回のリクエストでデータベースの接続が必要ないページキャッシュなどでこの機能がとても役に立ちます。データベースへの接続は負荷の大きいオペレーションであることを覚えておいてください。
 
@@ -182,7 +182,7 @@ $manager = Doctrine_Manager::getInstance();
 $conn = Doctrine_Manager::connection('sqlite::memory:', 'doctrine');
 </code>
 
-接続をテストするために{{test.php}}スクリプトを修正して小さなテストを実行しましょう。テストスクリプトが変数{{$conn}}が使えるようになったので接続が動作していることを確認するために小さなテストをセットアップしましょう:
+接続をテストするために{{test.php}}スクリプトを修正して小さなテストを実行しましょう。テストスクリプトで変数{{$conn}}が使えるようになったので接続が動作していることを確認するために小さなテストをセットアップしましょう:
 
 最初に、testテーブルを作りレコードを挿入します:
 
@@ -206,7 +206,7 @@ $results = $stmt->fetchAll();
 print_r($results);
 </code>
 
-ターミナルから{{test.php}}を実行すると結果は次の通りです:
+ターミナルから{{test.php}}を実行した結果は次の通りです:
 
 <code>
 $ php test.php
