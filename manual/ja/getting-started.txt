@@ -40,7 +40,7 @@ $ php phpinfo.php
 * PEARインストーラ
 * PEARパッケージをダウンロードする
 
-SVN (subversion)を通してDoctrineをダウンロードする方法がお勧めです。この場合は更新が楽です。プロジェクトが既にSVNでバージョン管理している場合、SVN externalsを使います。
+SVN (subversion)を通してDoctrineをダウンロードする方法がお勧めです。この場合は更新が楽です。プロジェクトを既にSVNでバージョン管理している場合、SVN externalsを使います。
 
 > **TIP**
 > 5分以内でDoctrineを試したいだけなら、サンドボックスのパッケージが推奨されます。次のセクションでサンドボックスパッケージを検討します。
@@ -50,7 +50,7 @@ SVN (subversion)を通してDoctrineをダウンロードする方法がお勧�
 Doctrineは一行もテストを書かずにDoctrineをテストするために設定をまったくしなくてよいDoctrine実装の特別なパッケージも提供します。[http://www.doctrine-project.org/download ダウンロードページ]から入手できます。
 
 > **NOTE**
-> サンドボックスの実装は本番アプリケーションには推奨されません。これはDoctrineの探求と地井さんテストの実行だけを目的としています。
+> サンドボックスの実装は本番アプリケーションには推奨されません。これはDoctrineの探求と小さなテストの実行だけを目的としています。
 
 +++ SVN
 
@@ -85,19 +85,19 @@ $ svn update
 
 プロジェクトで既にSVNでバージョン管理されている場合、DoctrineをインストールするためにSVN externalsを使うのがお勧めです。
 
-ターミナルでプロジェクトをチェックアウトすることから始めます:
+ターミナルでチェックアウト済みのプロジェクトへ移動することから始めます:
 
 <code>
 $ cd /var/www/my_project
 </code>
 
-プロジェクトをチェックアウトしたので、ターミナルから次のコマンドを実行してDoctrineをSVN externalとしてセットアップします:
+チェックアウトされたプロジェクトへ移動したので、ターミナルから次のコマンドを実行してDoctrineをSVN externalとしてセットアップします:
 
 <code>
 $ svn propedit svn:externals lib/vendor
 </code>
 
-上記のコマンドでエディタを開き次のテキストを押し込んで保存します:
+上記のコマンドでエディタを開き次のテキストを入力して保存します:
 
 <code>
 doctrine http://svn.doctrine-project.com/branches/1.1/lib  
@@ -109,7 +109,7 @@ svn updateを実行することでDoctrineをインストールできます:
 $ svn update
 </code>
 
-このコマンドによってDoctrineは次のパスでインストールされます: {{/var/www/my_project/lib/vendor/doctrine}}
+このコマンドによってDoctrineは{{/var/www/my_project/lib/vendor/doctrine}}へインストールされます。
 
 > **TIP**
 > SVN externalsへの変更をコミットすることをお忘れなく。
@@ -140,7 +140,7 @@ $ tar xzf Doctrine-1.2.1.tgz
 
 ++ 実装する
 
-Doctrineを手に入れたので、アプリケーションでDoctrineを実装する準備ができています。
+Doctrineを手に入れたので、アプリケーションにDoctrineを実装する準備ができています。
 これはDoctrineを始めることに向けた最初のステップです。
 
 最初に{{doctrine_test}}という名前のディレクトリを作ります。ここはすべてのテストコードを設置する場所です:
@@ -226,7 +226,7 @@ $manager = Doctrine_Manager::getInstance();
 ++++ オートロード機能の説明
 
 > **NOTE**
-> [http://www.php.net/spl_autoload_register PHPの公式サイト]でオートロード機能の使い方がわかります。オートローダーを利用することで予めロードされたすべてのクラスの代わりにリクエストされたクラスを遅延ロードできます。これはパフォーマンスの面で大きな恩恵があります。
+> [http://www.php.net/spl_autoload_register PHPの公式サイト]でオートロード機能の使い方がわかります。オートローダーを利用することで予めすべてのクラスをロードする代わりにリクエストされたクラスを遅延ロードできます。これはパフォーマンスの面で大きな恩恵があります。
 
 Doctrineのオートローダーの動作方法はシンプルです。クラスの名前とパスは相対的なので、名前に基づいてDoctrineクラスへのパスを決定できます。
 
